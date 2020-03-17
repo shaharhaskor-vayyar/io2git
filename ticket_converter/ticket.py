@@ -4,8 +4,6 @@ from github import Github
 USERNAME = USERNAME
 PASSWORD = PASSWORD
 
-repo_name = 'Software'
-
 Github_users = {Planiouser: githubuser}
 
 def is_str(a):
@@ -36,7 +34,6 @@ class Ticket:
         self.body = f'Original ticket link: https://vayyar.plan.io/issues/{df_value} \n\n {self.body}'
 
     def handle_state(self, df_value):
-        # TODO: check with Sivan
         if df_value != 'Solved':
             self.state = 'copy'
         else:
